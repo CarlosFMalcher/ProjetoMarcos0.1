@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Pagamentos</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-color: aliceblue;
+        }
+        body {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: aliceblue;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 10%;
+            width: 100%;
+            box-shadow: 0px 1px 10px 0.1px black;
+            margin-bottom: 30px;
+        }
+        .logo {
+            width: 80px;
+            cursor: pointer;
+            border-radius: 25px;
+        }
+        .navLinks {
+            list-style: none;
+        }
+        .navLinks li {
+            display: inline-block;
+            padding: 0px 20px;
+        }
+        .navLinks li a {
+            font-weight: 500;
+            font-size: 16px;
+            color: rgba(204, 28, 28, 0.781);
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .navLinks li a:hover {
+            color: rgba(119, 24, 24, 0.781);
+        }
+        button {
+            padding: 9px 25px;
+            background-color: rgba(204, 28, 28, 0.781);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background-color: rgba(119, 24, 24, 0.781);
+        }
+        .container {
+            width: 90%;
+            max-width: 800px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-top: 20px;
+            font-size: 28px;
+        }
+        h2 {
+            font-size: 22px;
+            color: #333;
+            margin: 20px 0 10px;
+        }
+        h3 {
+            font-size: 20px;
+            color: #333;
+            margin: 20px 0 10px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 12px;
+            border-bottom: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .download {
+            color: rgba(204, 28, 28, 0.781);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .download:hover {
+            color: rgba(119, 24, 24, 0.781);
+            text-decoration: underline;
+        }
+        .uploadArquivo {
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+        }
+        .uploadArquivo input[type="file"] {
+            margin: 10px 0 15px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="logo.png" alt="Logo da Empresa" class="logo">
+        <ul class="navLinks">
+            <li><a href="index.html">Gerenciador</a></li>
+            <li><a href="index.html">Salários</a></li>
+            <li><a href="historico.html">Histórico de Pagamentos</a></li>
+            <li><a href="Funcionários.html">Funcionários</a></li>
+        </ul>
+        <button>Login</button>
+    </header>
+
+    <h1>Histórico de Pagamentos</h1>
+
+    <div class="container">
+        <h2>Pagamentos Realizados</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Funcionário</th>
+                    <th>1° Quinzena</th>
+                    <th>Status</th>
+                    <th>2° Quinzena</th>
+                    <th>Status</th>
+                    <th>Valor Pago</th>
+                    <th>Comprovante</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>João Silva</td>
+                    <td>R$ 1500,00</td>
+                    <td>Pago</td>
+                    <td>R$ 1500,00</td>
+                    <td>Pago</td>
+                    <td>R$ 3000,00</td>
+                    <td><a href="comprovante_janeiro.pdf" class="download" download>Baixar</a></td>
+                </tr>
+                <tr>
+                    <td>Maria Oliveira</td>
+                    <td>R$ 1200,00</td>
+                    <td>Pago</td>
+                    <td>R$ 1200,00</td>
+                    <td>Pago</td>
+                    <td>R$ 2400,00</td>
+                    <td><a href="comprovante_fevereiro.pdf" class="download" download>Baixar</a></td>
+                </tr>
+                <tr>
+                    <td>Carlos Santos</td>
+                    <td>R$ 1300,00</td>
+                    <td>Pendente</td>
+                    <td>R$ 1300,00</td>
+                    <td>Pendente</td>
+                    <td>R$ 2600,00</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Upload de Comprovante de Pagamento</h3>
+        <div class="uploadArquivo">
+            <input type="file" accept=".pdf,.jpg,.jpeg,.png">
+            <button>Enviar Comprovante</button>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="homeBody.css">
+   
+    
+</head>
+
+<style>
+    *{
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background-color: aliceblue;
+    
+}
+
+body{
+    height: 500px;
+}
+
+li, a, button{
+    font-weight: 500;
+    font-size: 16px;
+    color: rgba(204, 28, 28, 0.781);
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+    box-shadow: 0px 1px 10px 0.1px black;
+    margin-bottom: 30px;
+    
+}
+
+.logo{
+    width: 80px;
+    cursor: pointer;
+    border-radius: 25px;
+    margin-top: 5px;
+}
+
+.navLinks{
+    list-style: none;
+}
+
+.navLinks li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.navLinks li a{
+    transition: all 0.3s;
+}
+
+.navLinks li a:hover{
+    transition: all 0.3s;
+    color: rgba(119, 24, 24, 0.781);
+}
+
+button{
+    padding: 9px 25px;
+    background-color: rgba(204, 28, 28, 0.781);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+}
+button:hover{
+    background-color: rgba(119, 24, 24, 0.781);
+    transition: all 0.3s;
+}
+
+h1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    color: rgba(204, 28, 28, 0.781);
+}
+
+.blocos{
+    display: flex;
+    justify-content: space-between;
+    margin: 70px 30%;
+}
+
+
+.bloco1,.bloco2{
+    border: 1px solid;
+    border-radius: 20px;
+    border-width: 1.5px;
+    padding: 110px 10%;
+    border-color: rgba(204, 28, 28, 0.781);
+    font-size: 16px;
+    color:rgba(204, 28, 28, 0.781);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+
+.bloco1:hover,.bloco2:hover{
+    box-shadow: 2px 5px 6px;
+    border: 1px solid;
+    border-radius: 20px;    
+    border-width: 1.5px;
+    padding: 110px 10%;
+    border-color: rgba(204, 28, 28, 0.781);
+    font-size: 16px;
+    color:rgba(204, 28, 28, 0.781);
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+    box-shadow: 10px 10px 10px 0.5 black;
+ 
+}
+
+</style>
+<body>
+
+<header>
+    <img class="logo" src="imagens/logo uirapuru.jpg" alt="">
+    <nav>
+        <ul class="navLinks">
+            <li><a href="index.html">Gerenciador</a></li>
+            <li><a href="index.html">Salários</a></li>
+            <li><a href="historico.html">Histórico de Pagamentos</a></li>
+            <li><a href="Funcionários.html">Funcionários</a></li>
+        </ul>
+    </nav>
+    <a class="cta" href="#"><button>Contato</button></a>
+</header>
+
+<main>
+    <table>
+        <thead>
+            <tr>
+                <th>Nome do Funcionário</th>
+                <th>Salário</th>
+                <th>Vales (Descontos)</th>
+                <th>Total</th>
+                <th>Pago?</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>João Silva</td>
+                <td>R$ 3000,00</td>
+                <td>R$ 300,00</td>
+                <td>R$ 2700,00</td>
+                <td class="checkbox-cell"><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Maria Oliveira</td>
+                <td>R$ 4000,00</td>
+                <td>R$ 400,00</td>
+                <td>R$ 3600,00</td>
+                <td class="checkbox-cell"><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Carlos Santos</td>
+                <td>R$ 2500,00</td>
+                <td>R$ 250,00</td>
+                <td>R$ 2250,00</td>
+                <td class="checkbox-cell"><input type="checkbox"></td>
+            </tr>
+            <tr>
+                <td>Ana Costa</td>
+                <td>R$ 3500,00</td>
+                <td>R$ 350,00</td>
+                <td>R$ 3150,00</td>
+                <td class="checkbox-cell"><input type="checkbox"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <button>Confirmar Pagamento</button>
+    
+</main>
+    
+</body>
+</html>

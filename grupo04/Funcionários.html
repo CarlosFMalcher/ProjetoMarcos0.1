@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Funcionários</title>
+    <style>
+        * {
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            background-color: aliceblue;
+        }
+        body {
+            height: 500px;
+        }
+        li, a, button {
+            font-weight: 500;
+            font-size: 16px;
+            color: rgba(204, 28, 28, 0.781);
+            text-decoration: none;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 10%;
+            box-shadow: 0px 1px 10px 0.1px black;
+            margin-bottom: 30px;
+        }
+        .logo {
+            width: 80px;
+            cursor: pointer;
+            border-radius: 25px;
+            margin-top: 5px;
+        }
+        .navLinks {
+            list-style: none;
+        }
+        .navLinks li {
+            display: inline-block;
+            padding: 0px 20px;
+        }
+        .navLinks li a {
+            transition: all 0.3s;
+        }
+        .navLinks li a:hover {
+            color: rgba(119, 24, 24, 0.781);
+            transition: all 0.3s;
+        }
+        button {
+            padding: 9px 25px;
+            background-color: rgba(204, 28, 28, 0.781);
+            color: white;
+            border: none;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        button:hover {
+            background-color: rgba(119, 24, 24, 0.781);
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+        h2 {
+            font-size: 24px;
+            color: #333;
+            margin: 20px 0;
+        }
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 800px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color:#f44336;
+            color: white;
+        }
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        .actions button {
+            padding: 8px 12px;
+            margin-right: 5px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        .actions .edit-btn {
+            background-color: #4CAF50;
+            color: white;
+        }
+        .actions .delete-btn {
+            background-color: #f44336;
+            color: white;
+        }
+
+        .buttonsColums{
+            flex-direction: row;
+            margin-top: 2%;
+            
+        } 
+
+        .buttonType2{
+            background-color: #4CAF50;
+            border-radius: 2px;
+        }
+
+        .buttonType2:hover{
+            background-color: #459b48;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <img src="imagens/logo uirapuru.jpg" alt="Logo da Empresa" class="logo">
+        <ul class="navLinks">
+            <li><a href="index.html">Gerenciador</a></li>
+            <li><a href="index.html">Salários</a></li>
+            <li><a href="historico.html">Histórico de Pagamentos</a></li>
+            <li><a href="Funcionários.html">Funcionários</a></li>
+        </ul>
+        <button>Contato</button>
+    </header>
+
+    <div class="container">
+        <h2>Lista de Funcionários</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cargo</th>
+                    <th>Valor da Primeira Quinzena</th>
+                    <th>Valor da Segunda Quinzena</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>João Silva</td>
+                    <td>Gerente</td>
+                    <td>R$ 1500,00</td>
+                    <td>R$ 1500,00</td>
+                    <td>Ativo</td>
+                    <td class="actions">
+                        <button class="edit-btn">Editar</button>
+                        <button class="delete-btn">Excluir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Maria Oliveira</td>
+                    <td>Assistente</td>
+                    <td>R$ 1200,00</td>
+                    <td>R$ 1200,00</td>
+                    <td>Ativo</td>
+                    <td class="actions">
+                        <button class="edit-btn">Editar</button>
+                        <button class="delete-btn">Excluir</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Carlos Santos</td>
+                    <td>Analista</td>
+                    <td>R$ 1300,00</td>
+                    <td>R$ 1300,00</td>
+                    <td>Inativo</td>
+                    <td class="actions">
+                        <button class="edit-btn">Editar</button>
+                        <button class="delete-btn">Excluir</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="buttonsColums">
+        <button class="buttonType2">Cadastrar Novo Funcionário</button>
+        <button class="buttonType2">Gerar Relatórios</button>
+        <button class="buttonType2">Exportar Relatório em PDF</button>
+        </div>
+    </div>
+
+</body>
+</html>
